@@ -12,6 +12,10 @@ const indexOfPet = (key, value) => {
   return output;
 }
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+})
+
 app.get('/pets', (req, res) => {
   res.send(pets);
 });
